@@ -38,6 +38,7 @@ This backend API manages property listings with full user authentication, search
 - Redis instance (Upstash or local)  
 - npm or yarn
 
+
 API Endpoints
 Base URL: https://hypergro-backend.vercel.app/api
 
@@ -61,7 +62,6 @@ DELETE /:propertyId — Remove property from favorites (requires authentication)
 Recommendation Routes (/recommendation)
 POST /recommend — Recommend a property (requires authentication)
 GET / — Get recommendations received (requires authentication)
-
 
 
 ### Environment Variables
