@@ -38,30 +38,43 @@ This backend API manages property listings with full user authentication, search
 - Redis instance (Upstash or local)  
 - npm or yarn
 
+# API Endpoints
 
-API Endpoints
 Base URL: https://hypergro-backend.vercel.app/api
 
-User Routes (/user)
-POST /register — Register a new user
-POST /login — Login user
-GET /search-user — Search user by email (requires authentication, query param: email)
+---
 
-Property Routes (/property)
-POST / — Create a new property (requires authentication)
-GET / — Get all properties
-GET /:id — Get property by ID
-PUT /:id — Update property by ID (requires authentication)
-DELETE /:id — Delete property by ID (requires authentication)
+### User Routes (`/user`)
 
-Favorites Routes (/fav)
-POST /:propertyId — Add property to favorites (requires authentication)
-GET / — Get all favorite properties (requires authentication)
-DELETE /:propertyId — Remove property from favorites (requires authentication)
+- post `/register` — Register a new user  
+- post `/login` — Login user  
+- get `/search-user` — Search user by email (requires authentication, query param: email)
 
-Recommendation Routes (/recommendation)
-POST /recommend — Recommend a property (requires authentication)
-GET / — Get recommendations received (requires authentication)
+---
+
+### Property Routes (`/property`)
+
+- post `/` — Create a new property (requires authentication)  
+- get `/` — Get all properties  
+- get `/:id` — Get property by ID  
+- put `/:id` — Update property by ID (requires authentication)  
+- delete `/:id` — Delete property by ID (requires authentication)
+
+---
+
+### Favorites Routes (`/fav`)
+
+- post `/:propertyId` — Add property to favorites (requires authentication)  
+- get `/` — Get all favorite properties (requires authentication)  
+- delete `/:propertyId` — Remove property from favorites (requires authentication)
+
+---
+
+### Recommendation Routes (`/recommendation`)
+
+- post `/recommend` — Recommend a property (requires authentication)  
+- get `/` — Get recommendations received (requires authentication)
+
 
 
 ### Environment Variables
