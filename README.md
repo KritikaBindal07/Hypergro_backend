@@ -1,4 +1,4 @@
-# 🏠 Property Management Backend API
+#  Property Management Backend API
 
 ## 🚀 Overview
 
@@ -38,6 +38,32 @@ This backend API manages property listings with full user authentication, search
 - Redis instance (Upstash or local)  
 - npm or yarn
 
+API Endpoints
+Base URL: https://hypergro-backend.vercel.app/api
+
+User Routes (/user)
+POST /register — Register a new user
+POST /login — Login user
+GET /search-user — Search user by email (requires authentication, query param: email)
+
+Property Routes (/property)
+POST / — Create a new property (requires authentication)
+GET / — Get all properties
+GET /:id — Get property by ID
+PUT /:id — Update property by ID (requires authentication)
+DELETE /:id — Delete property by ID (requires authentication)
+
+Favorites Routes (/fav)
+POST /:propertyId — Add property to favorites (requires authentication)
+GET / — Get all favorite properties (requires authentication)
+DELETE /:propertyId — Remove property from favorites (requires authentication)
+
+Recommendation Routes (/recommendation)
+POST /recommend — Recommend a property (requires authentication)
+GET / — Get recommendations received (requires authentication)
+
+
+
 ### Environment Variables
 
 Create `.env` file:
@@ -47,3 +73,4 @@ PORT=5000
 MONGO_URI=<your_mongodb_connection_string>
 JWT_SECRET=<your_jwt_secret_key>
 REDIS_URL=<your_redis_connection_url>
+
